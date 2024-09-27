@@ -1,0 +1,59 @@
+.testimonial-carousel .testimonial-item {
+    padding-bottom: 40px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.testimonial-carousel .testimonial-item:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-carousel .testimonial-comment {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.testimonial-carousel .testimonial-img img {
+    border: 3px solid #007bff;
+    padding: 5px;
+}
+
+.testimonial-carousel .fa-star {
+    color: #007bff;
+}
+
+.testimonial-carousel .owl-carousel .owl-nav {
+    display: none;
+}
+
+.testimonial-carousel .owl-dots .owl-dot {
+    background-color: #007bff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active {
+    background-color: #0056b3;
+}
+.testimonial-carousel {
+    .owl-item {
+        &.active {
+            .testimonial-item {
+                background-color: #007bff; // Color azul cuando está activo
+                color: white; // Texto blanco cuando está activo
+            }
+        }
+
+        &:not(.active) {
+            .testimonial-item {
+                background-color: #757575; // Color #757575 cuando no está activo
+                color: white; // Texto blanco cuando no está activo
+            }
+        }
+    }
+}
