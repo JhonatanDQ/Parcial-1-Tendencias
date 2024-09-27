@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="hold-transition">
+<body class="hold-transition bg-image">
     @yield('content')
 </body>
 <!-- jQuery -->
