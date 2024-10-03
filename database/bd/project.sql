@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-09-2024 a las 07:05:24
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Tiempo de generación: 03-10-2024 a las 22:47:23
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,14 +32,6 @@ CREATE TABLE `cache` (
   `value` mediumtext NOT NULL,
   `expiration` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `cache`
---
-
-INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('jhon@example.com|127.0.0.1', 'i:1;', 1726286077),
-('jhon@example.com|127.0.0.1:timer', 'i:1726286077;', 1726286077);
 
 -- --------------------------------------------------------
 
@@ -897,7 +889,8 @@ CREATE TABLE `password_reset_tokens` (
 --
 
 INSERT INTO `password_reset_tokens` (`email`, `token`, `created_at`) VALUES
-('jhon@example.com', '$2y$12$n4fs2Q7ZR7kKi5CtGgKO9e8OS.ihobzPFhTdawasEajH0JWuM1Mxi', '2024-09-04 14:08:29');
+('jhon@example.com', '$2y$12$n4fs2Q7ZR7kKi5CtGgKO9e8OS.ihobzPFhTdawasEajH0JWuM1Mxi', '2024-09-04 14:08:29'),
+('quiro1804@hotmail.com', '$2y$12$MvJ4UWHoJ/3CgpneGL5ngOusYU3VGNJR0LGlZO7ElN1J.ZWrmZjYK', '2024-10-03 19:21:25');
 
 -- --------------------------------------------------------
 
@@ -966,8 +959,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('QzUdmKvg088yrmzUrNlH10C4IMGATBjbFmqR2TAb', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoibzFzNkY1ZXhwQ1V3N1BoRmkyM3dVelRIb2VPcENyNEtIRXRXVG5odyI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI5OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvc2VydmljZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjM7czo0OiJhdXRoIjthOjE6e3M6MjE6InBhc3N3b3JkX2NvbmZpcm1lZF9hdCI7aToxNzI2ODkyNTM0O319', 1726895100),
-('upJ9W42VLogg7r1R3dDS5TylHDQIK8eNKvm2iMOi', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiTFJEejJXVWlBN1pvellhVGgydUMwaHpHNWJET2JRMjlCQWVnVGxDZCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czoyMToiaHR0cDovLzEyNy4wLjAuMTo4MDAwIjt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fX0=', 1726286470);
+('0Rm8evIyFvBqhlcEa2fsxyOKnJSImvc16QZH2V5b', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoidVc3TTFJVkZWOEFXekxVeDREWEtZN3AyUDR0OXJqU0NXeUpXU3BaTyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjIxOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTozO3M6NDoiYXV0aCI7YToxOntzOjIxOiJwYXNzd29yZF9jb25maXJtZWRfYXQiO2k6MTcyNzk4NTEwMjt9fQ==', 1727987968);
 
 -- --------------------------------------------------------
 
@@ -1000,6 +992,7 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
+  `photo` text NOT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -1009,31 +1002,31 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'Jhon', 'jhon@example.com', NULL, '$2y$12$dK3zX9iGZ3vjYMyVW8ZEkOvrKf/KHUi/YJJd6d8F1sfVcNuu5uOKm', NULL, '2024-08-23 14:04:44', '2024-08-23 14:04:44'),
-(3, 'Jhonatan', 'quiro1804@hotmail.com', NULL, '$2y$12$hO.VwjMx5c4nKGJfxq4Za.fG1j6fXvo9cGPHAUfXY8QQEZ2JiB2F6', NULL, '2024-09-14 03:55:36', '2024-09-14 03:55:36'),
-(4, 'Murphy Rolfson', 'mellie30@example.org', '2024-09-21 04:20:19', '$2y$12$VmK1Gl0rJNGe7g54CipgWumoOk2DckxYG9.7wYSCjHLI5lCzaoKJi', 'QSMDawJNxo', '2024-09-21 04:20:19', '2024-09-21 04:20:19'),
-(5, 'Roscoe Frami', 'will.hilbert@example.org', '2024-09-21 04:20:19', '$2y$12$VmK1Gl0rJNGe7g54CipgWumoOk2DckxYG9.7wYSCjHLI5lCzaoKJi', 'xNlmvpKron', '2024-09-21 04:20:19', '2024-09-21 04:20:19'),
-(6, 'Prof. Gino Osinski', 'romaguera.gage@example.com', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'CGdzpmk7PU', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(7, 'Mrs. Fanny Muller II', 'zboyer@example.org', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'NyHsKj9UrM', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(8, 'Prof. Kelvin Rohan V', 'henri.herzog@example.org', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'eI8GMIJTOh', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(9, 'Melvina O\'Keefe', 'sid69@example.org', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'kbBi6OAJGE', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(10, 'Norris Aufderhar', 'gilda15@example.org', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'ePgXkhps5X', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(11, 'Miss Onie Bins PhD', 'ramona45@example.net', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'smJkSnpHEm', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(12, 'Roxane Homenick', 'horn@example.net', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '4KK0MgecIU', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(13, 'Ike Walker', 'kolson@example.com', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'Bno5P7H4ge', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(14, 'Lexi Willms', 'alfredo15@example.net', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'HYqZk2ZRza', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(15, 'Bret Beatty', 'modesto00@example.net', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', 'n76xuUg4Hi', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
-(16, 'Karianne Altenwerth II', 'grady.vella@example.org', '2024-09-21 05:04:58', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'YRT707sekv', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(17, 'Arturo White', 'kub.joana@example.org', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'pxLIetmKox', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(18, 'Brandy Auer', 'josie91@example.net', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'nt3TOa9zAw', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(19, 'Leland Hyatt', 'jarvis.waters@example.org', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'lvReQ3Riok', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(20, 'Lisandro Beer PhD', 'arlene51@example.com', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'ShtI7roWBM', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(21, 'Mariane Dare', 'blair.bode@example.org', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'Bua7oUvV5f', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(22, 'Noemi Boyer', 'bbechtelar@example.com', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '9yjQNvdHf8', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(23, 'Prof. Arianna Williamson DVM', 'fharris@example.net', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'K7xhKzDUlA', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(24, 'Cornelius McLaughlin', 'lukas76@example.com', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'VAtaQXYpek', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
-(25, 'Dr. Destinee Grimes', 'kling.zora@example.org', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', 'dRl2Y1pEDI', '2024-09-21 05:04:59', '2024-09-21 05:04:59');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `photo`, `remember_token`, `created_at`, `updated_at`) VALUES
+(2, 'Jhon', 'jhon@example.com', NULL, '$2y$12$dK3zX9iGZ3vjYMyVW8ZEkOvrKf/KHUi/YJJd6d8F1sfVcNuu5uOKm', '', NULL, '2024-08-23 14:04:44', '2024-08-23 14:04:44'),
+(3, 'Jhonatan', 'quiro1804@hotmail.com', NULL, '$2y$12$hO.VwjMx5c4nKGJfxq4Za.fG1j6fXvo9cGPHAUfXY8QQEZ2JiB2F6', 'user2-160x160.jpg', NULL, '2024-09-14 03:55:36', '2024-09-14 03:55:36'),
+(4, 'Murphy Rolfson', 'mellie30@example.org', '2024-09-21 04:20:19', '$2y$12$VmK1Gl0rJNGe7g54CipgWumoOk2DckxYG9.7wYSCjHLI5lCzaoKJi', '', 'QSMDawJNxo', '2024-09-21 04:20:19', '2024-09-21 04:20:19'),
+(5, 'Roscoe Frami', 'will.hilbert@example.org', '2024-09-21 04:20:19', '$2y$12$VmK1Gl0rJNGe7g54CipgWumoOk2DckxYG9.7wYSCjHLI5lCzaoKJi', '', 'xNlmvpKron', '2024-09-21 04:20:19', '2024-09-21 04:20:19'),
+(6, 'Prof. Gino Osinski', 'romaguera.gage@example.com', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'CGdzpmk7PU', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(7, 'Mrs. Fanny Muller II', 'zboyer@example.org', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'NyHsKj9UrM', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(8, 'Prof. Kelvin Rohan V', 'henri.herzog@example.org', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'eI8GMIJTOh', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(9, 'Melvina O\'Keefe', 'sid69@example.org', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'kbBi6OAJGE', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(10, 'Norris Aufderhar', 'gilda15@example.org', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'ePgXkhps5X', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(11, 'Miss Onie Bins PhD', 'ramona45@example.net', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'smJkSnpHEm', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(12, 'Roxane Homenick', 'horn@example.net', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', '4KK0MgecIU', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(13, 'Ike Walker', 'kolson@example.com', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'Bno5P7H4ge', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(14, 'Lexi Willms', 'alfredo15@example.net', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'HYqZk2ZRza', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(15, 'Bret Beatty', 'modesto00@example.net', '2024-09-21 04:52:27', '$2y$12$Rt7onn9Sahr9faweM4we7e1KpWM0iOYICaIzc00lJeZFsvTSFFwq2', '', 'n76xuUg4Hi', '2024-09-21 04:52:27', '2024-09-21 04:52:27'),
+(16, 'Karianne Altenwerth II', 'grady.vella@example.org', '2024-09-21 05:04:58', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'YRT707sekv', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(17, 'Arturo White', 'kub.joana@example.org', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'pxLIetmKox', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(18, 'Brandy Auer', 'josie91@example.net', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'nt3TOa9zAw', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(19, 'Leland Hyatt', 'jarvis.waters@example.org', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'lvReQ3Riok', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(20, 'Lisandro Beer PhD', 'arlene51@example.com', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'ShtI7roWBM', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(21, 'Mariane Dare', 'blair.bode@example.org', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'Bua7oUvV5f', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(22, 'Noemi Boyer', 'bbechtelar@example.com', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', '9yjQNvdHf8', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(23, 'Prof. Arianna Williamson DVM', 'fharris@example.net', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'K7xhKzDUlA', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(24, 'Cornelius McLaughlin', 'lukas76@example.com', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'VAtaQXYpek', '2024-09-21 05:04:59', '2024-09-21 05:04:59'),
+(25, 'Dr. Destinee Grimes', 'kling.zora@example.org', '2024-09-21 05:04:59', '$2y$12$6Wa5ymdy6J4fFkDO10Se2u7iccFnn.3ZGNeZ73sfj5iujAppdsQwi', '', 'dRl2Y1pEDI', '2024-09-21 05:04:59', '2024-09-21 05:04:59');
 
 --
 -- Índices para tablas volcadas
