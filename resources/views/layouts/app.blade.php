@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div id="app" class="wrapper">
+    <div id="app" class="hold-transition sidebar-mini layout-fixed">
         <main class="py-4">
             @include('layouts.partial.topbar')
             @include('layouts.partial.sidebar')
