@@ -1,6 +1,9 @@
 @extends('layouts.appservice')
 
+@section ('title' ,'Servicios')
+
 @section('content')
+
 <!-- Services Start -->
 <div class="container-fluid bg-light service py-5">
     <div class="container py-5">
